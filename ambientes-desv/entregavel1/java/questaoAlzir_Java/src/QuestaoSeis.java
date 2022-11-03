@@ -2,7 +2,9 @@ import javax.swing.*;
 
 public class QuestaoSeis {
     public static void main(String[] args) {
-        int QuantAlu = Integer.parseInt(JOptionPane.showInputDialog("Numero de notas de alunos:"));
+        System.out.println("N tem que ser maior ou igual 1" +
+                "que 10");
+        int QuantAlu = Integer.parseInt(JOptionPane.showInputDialog("quantidade de n:"));
         int nota;
         int contagem = 0;
         int i = 0;
@@ -10,13 +12,16 @@ public class QuestaoSeis {
         while (i < QuantAlu) {
             i = i + 1;
 
-            nota = Integer.parseInt(JOptionPane.showInputDialog("Qual foi a nota do aluno:"));
+            nota = Integer.parseInt(JOptionPane.showInputDialog("valor de N"));
 
-            if (nota >= 5) {
+            if (nota >= 10) {
                 contagem = contagem + 1;
+            }else {
+                System.out.println( "nao eh um numero valido");
             }
         }
 
-        System.out.printf("O numero de aprovacoes foi de: " + contagem + " aluno(os)" );
+        System.out.printf("o n inteiro será " + contagem );
     }
 }
+

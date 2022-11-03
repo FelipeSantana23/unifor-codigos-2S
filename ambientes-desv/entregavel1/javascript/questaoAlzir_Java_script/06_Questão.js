@@ -3,10 +3,12 @@ var QuantAlu = prompt("Número de notas de alunos:"), nota, contagem = 0,i = 0;
 while (i < QuantAlu) {
     i = i + 1;
 
-    nota = prompt("Qual foi a nota do aluno:");
+    nota = Integer.parseInt(JOptionPane.showInputDialog("valor de N"));
 
-    if (nota >= 5) {
+    if (nota >= 10) {
         contagem = contagem + 1;
+    }else {
+        System.out.println( "nao eh um numero valido");
     }
 }
 
