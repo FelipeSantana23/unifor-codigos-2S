@@ -36,5 +36,4 @@ function quickSort(numeros, esquerda = 0, direita = numeros.length - 1) {
   }
   return numeros;
 }
-
-console.log(quickSort([8, 7, 5, 0, 15, 5255, -1]));
+module.exports = quickSort;

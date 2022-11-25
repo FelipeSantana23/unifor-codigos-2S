@@ -1,35 +1,40 @@
-function ordenacao(){
-function qs(vet)
-{
-    quickSort(vet, 0, vet.length - 1);
+function swap(numeros, indiceEsquerda, indiceDireita) {
+  var temp = numeros[indiceEsquerda];
+  numeros[indiceEsquerda] = numeros[indiceDireita];
+  numeros[indiceDireita] = temp;
 }
-
-function quickSort(vet, ini, fim)
-{
-    var i = ini, f = fim, m = Math.floor((i + f)/2);
-
-    while(i < f)
-    {
-        while(vet[i] < vet[m])
-            i++;
-
-        while(vet[f] > vet[m])
-            f--;
-
-        if(i <= f)
-        {
-            var temp = vet[i];
-            vet[i] = vet[f];
-            vet[f] = temp;
-            i++;
-            f--;
-        }
+function partition(numeros, esquerda, direita) {
+  var pivo = numeros[Math.floor((direita + esquerda) / 2)],
+    i = esquerda,
+    j = direita;
+  while (i <= j) {
+    while (numeros[i] < pivo) {
+      i++;
     }
-
-    if(f > ini)
-        quickSort(vet, ini, f);
-
-    if(i < fim)
-        quickSort(vet, i, fim);
+    while (numeros[j] > pivo) {
+      j--;
+    }
+    if (i <= j) {
+      swap(numeros, i, j);
+      i++;
+      j--;
+    }
+  }
+  return i;
 }
+
+function quickSort(numeros, esquerda = 0, direita = numeros.length - 1) {
+  var indice;
+  if (numeros.length > 1) {
+    indice = partition(numeros, esquerda, direita);
+    if (esquerda < indice - 1) {
+      quickSort(numeros, esquerda, indice - 1);
+    }
+    if (indice < direita) {
+      quickSort(numeros, indice, direita);
+    }
+  }
+  return numeros;
 }
+
+document.write(quickSort([8, 7, 5, 0, 15, 5255, -1]));

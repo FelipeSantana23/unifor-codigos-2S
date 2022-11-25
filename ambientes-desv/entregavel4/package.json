@@ -1,0 +1,14 @@
+{
+  "name": "entregavel-4",
+  "version": "1.0.0",
+  "description": "Entregavel 4 alzir",
+  "main": "01_Questão.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
