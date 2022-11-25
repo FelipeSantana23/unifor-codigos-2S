@@ -19,6 +19,8 @@ node Entregavel3.js
 - Crie uma requisição GET com o link localhost:8888
 - Aperte SEND
 
+![image](https://user-images.githubusercontent.com/110501530/199853325-5699c558-3bc6-427f-bb31-3f60e706b7a4.png)
+
 
 ### Requisição POST
 - Crie uma requisição POST com o link localhost:8888/
@@ -35,3 +37,7 @@ node Entregavel3.js
 } 
 ```
 - Aperte SEND
+
+.
+![image](https://user-images.githubusercontent.com/110501530/199853384-27aace31-a5df-49a6-a8a0-def32e832108.png)
+
