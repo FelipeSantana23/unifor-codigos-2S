@@ -37,4 +37,18 @@ function quickSort(numeros, esquerda = 0, direita = numeros.length - 1) {
   return numeros;
 }
 
-console.log(quickSort([8, 7, 5, 0, 15, 5255, -1]));
+//document.write(quickSort([8, 7, 5, 0, 15, 5255, -1]));
+
+var teste1 = Number(prompt("Digite o valor que deseja ordenar:"));
+console.log(teste1);
+
+var teste2 = Number(prompt("Digite o valor que deseja ordenar:"));
+console.log(teste2);
+
+var teste3 = Number(prompt("Digite o valor que deseja ordenar:"));
+console.log(teste3);
+
+var teste4 = Number(prompt("Digite o valor que deseja ordenar:"));
+console.log(teste4);
+
+document.write(quickSort([teste1, teste2, teste3, teste4]));
